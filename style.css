@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+.container{
+    background-color: #000851;
+    background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+    height: 100vh;
+}
+
+.gridbox{
+    display: grid;
+    gap: 10px;
+    justify-content: center; 
+    /* align-items: center; */
+    padding-top: 5rem;
+    grid-template-areas:'search search '
+                        'weatherContainer info'
+                        'forcast forcast';
+}
+
+.searchBox{
+    margin-bottom: 2rem;
+    grid-area: search;
+    display: flex;
+    gap: 1rem;
+    /* justify-items: stretch; */
+}
+
+.searchBox input{
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 2px 15px;
+    width: 90%;
+}
+.searchBox button{
+    border-radius: 15px;
+    font-size: 15px;
+    padding: 2px 15px;
+    background-color: orange;
+}
+.card{
+    background: rgb(239,213,255);
+background: linear-gradient(180deg, rgba(239,213,255,1) 0%, rgba(81,164,218,1) 100%);
+    padding: 1rem;
+    border-radius: 15px;
+}
+.weatherContainer{
+    grid-area: weatherContainer;
+    display: grid;
+    grid-template-areas:'date . '
+                        'loc . '
+                        '. weather';
+}
+#date{
+    grid-area:date ;
+}
+#loc{
+    grid-area: loc;
+}
+
+.weather{
+    grid-area: weather;
+    
+}
+#crTemp{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:'tempIcon temp'
+                      'weatherDescription weatherDescription';
+}
+.tempIcon{
+    grid-area:tempIcon;
+}
+.temp{
+    grid-area:temp;
+    display: flex;
+    gap: 10px;
+    text-align: center;
+}
+.temp h1{
+    /* display: block; */
+    font-size: 60px;
+}
+
+.temp p{
+    font-size: 25px;
+}
+.weatherDescription{
+    grid-area:weatherDescription;
+    align-self: flex-start;
+    text-align: right;
+    font-size: 19px;
+    margin-top: -10px;
+}
+.info{
+    grid-area: info;
+}
+.info div{
+    margin-bottom: 10px;
+}
+.forcast{
+    grid-area: forcast;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+
+.day{
+    text-align: center;
+}
+.forcastTemp{
+
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .gridbox{
+        display: grid;
+        gap: 10px;
+        justify-content: center; 
+        /* align-items: center; */
+        padding-top: 5rem;
+        grid-template-areas:'search  '
+                            'weatherContainer '
+                            'info'
+                            'forcast ';
+    }
+    
+    .info{
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+}

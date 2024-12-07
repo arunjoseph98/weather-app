@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/4e0e2d4c5f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="gridbox">
+            <div class="searchBox">
+                <input id="searchKey" type="text" placeholder="search">
+                <button onclick="getWeather()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="weatherContainer card">
+                <div  id="date">
+                    <p>Sunday,5 dec 2024</p>
+                </div>
+                <div id="loc">
+                    <h2>Kochi<span style="font-size: 15px;">, In</span></h2>
+                </div>
+                <div class="weather">
+                    <div id="crTemp">
+                        <div class="tempIcon">
+                            <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                        </div>
+                        <div class="temp">
+                            <h1>26</h1>
+                        <p>&deg;c</p>
+                        </div>
+                        <div class="weatherDescription"> 
+                            <p>overcast clouds</p>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            <div id="otherinfo" class="info card">
+                <div>
+                    <p>humidity: 121</p>
+                </div>
+                <div>
+                    <p>wind speed: 1515</p>
+                </div>
+                <div>
+                    <p>pressure: 21561</p>
+                </div>
+                <div>
+                    <p>visibility: 151</p>
+                </div>
+            </div>
+            <div id="forecast-container" class="forcast card">
+                
+                
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./app.js"></script>
+
+</html>
